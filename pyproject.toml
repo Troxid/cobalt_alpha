@@ -1,0 +1,52 @@
+[project]
+name = "cobalt_alpha"
+version = "0.1.0"
+description = "AI agent for scientific calculations"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    # LangGraph stack
+    "langgraph>=0.2.0",
+    "langchain>=0.3.0",
+    "langchain-core>=0.3.0",
+    "langchain-community>=0.3.0",
+    "langsmith>=0.1.0",
+    "langchain-openai>=0.2.0",
+    "arize-phoenix>=8.0.0",
+    "openinference-instrumentation-langchain>=0.1.30",
+
+    # Scientific stack
+    "numpy>=2.0.0",
+    "scipy>=1.13.0",
+    "pandas>=2.2.0",
+    "sympy>=1.13.0",
+    "matplotlib>=3.9.0",
+    "seaborn>=0.13.0",
+    "scikit-learn>=1.5.0",
+    "statsmodels>=0.14.0",
+    "networkx>=3.3",
+    "simpy>=4.1.0",
+    "control>=0.10.0",
+    "automata-lib>=8.0.0",
+
+    # Web stack
+    "pydantic>=2.8.0",
+    "pydantic-settings>=2.3.0",
+    "httpx>=0.27.0",
+    "aiohttp>=3.10.0",
+]
+
+[project.scripts]
+cobalt-alpha = "cobalt_alpha.main:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-s"
+
+[tool.uv]
+package = true
