@@ -23,13 +23,17 @@ source .venv/bin/activate
 uv sync --dev
 ```
 
+# Запуск платформы трейсинга (Arize Phoenix)
+
+```
+docker compose -f docker-compose.phoenix.yml up -d
+```
+
 # Запуск агента с локальной LLM
 
 В случае использования локальной ollama:
 ```shell
 ollama serve &
-ollama run gemma4:e4b & 
-ollama run gemma4:26b &
 ```
 
 Запуск веб-сервера
@@ -37,11 +41,7 @@ ollama run gemma4:26b &
 uv run cobalt-alpha
 ```
 
-# Запуск платформы трейсинга (Arize Phoenix)
 
-```
-docker compose -f docker-compose.phoenix.yml up -d
-```
 
 # Ограничения 
 

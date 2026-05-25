@@ -71,7 +71,6 @@ def route_after_router(state: GraphState) -> Command[Literal["node_lite", "node_
 
 
 def build_graph() -> CompiledStateGraph[GraphState, None, GraphState, GraphState]:
-    setup_phoenix()  # TODO seprikov: move from build_graph to web_server
 
     graph = StateGraph(GraphState)
 
