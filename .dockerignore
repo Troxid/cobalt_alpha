@@ -1,0 +1,9 @@
+.deepeval
+.git
+.idea
+.pytest_cache
+.venv
+__pycache__
+*.pyc
+.env
+graph.png
