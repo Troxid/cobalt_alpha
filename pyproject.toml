@@ -30,6 +30,7 @@ dependencies = [
     "automata-lib>=8.0.0",
 
     # Web stack
+    "gradio>=5.0.0",
     "pydantic>=2.8.0",
     "pydantic-settings>=2.3.0",
     "httpx>=0.27.0",
@@ -38,9 +39,12 @@ dependencies = [
 
 [project.scripts]
 cobalt-alpha = "cobalt_alpha.main:main"
+cobalt-alpha-ui = "cobalt_alpha.ui.chat_ui:main"
+cobalt-alpha-draw-graph = "cobalt_alpha.draw_graph:main"
 
 [dependency-groups]
 dev = [
+    "deepeval>=4.0.0",
     "pytest>=8.0.0",
 ]
 
