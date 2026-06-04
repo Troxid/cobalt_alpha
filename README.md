@@ -75,7 +75,10 @@ uv run deepeval test run tests/evals/test_cases_1.py
 [Чат с агентом (localhost:7860)](http://localhost:7860)  
 [Phoenix - (localhost:6006)](http://localhost:6006/projects)  
 
+Необходимо создать и заполнить своими параметрами `.env`.  
+Пример доступных параметров в `.env.example`.  
 
+Запуск стенда:  
 ```
 docker compose -f docker-compose.prod.yml up --build
 ```
