@@ -61,7 +61,9 @@ def _worker(code: str, result_queue: mp.Queue) -> None:
             {
                 "ok": True,
                 "stdout": stdout_buffer.getvalue(),
-                "result_repr": None if exec_result.last_value is None else repr(exec_result.last_value),
+                "result_repr": None
+                if exec_result.last_value is None
+                else repr(exec_result.last_value),
                 "execution_time_ms": int((perf_counter() - started) * 1000),
                 "timed_out": False,
             }

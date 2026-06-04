@@ -35,8 +35,6 @@ AI агент, схожий по функционалу на Wolfram|Alpha - к�
 [Чат с агентом (localhost:7860)](http://localhost:7860)  
 [Phoenix (localhost:6006/projects)](http://localhost:6006/projects)  
 
-## Инициализация проекта
-
 Используемый в проекте пакетный менеджер - `uv` ([Установка uv](https://docs.astral.sh/uv/getting-started/installation/))
 
 Необходимо создать и заполнить своими параметрами `.env`.  

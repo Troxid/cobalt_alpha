@@ -36,10 +36,13 @@ def node_router(state: GraphState) -> GraphState:
     llm = llm_router().with_structured_output(RouterDecision)
     router_prompt = load_prompt("node_router.md")
     router_input = state.current_user_input
-    previous_context = state.task_artifact or (
-        f"problem_spec: {state.problem_spec}\n"
-        f"answer_artifact: {state.answer_artifact}"
-    ).strip()
+    previous_context = (
+        state.task_artifact
+        or (
+            f"problem_spec: {state.problem_spec}\n"
+            f"answer_artifact: {state.answer_artifact}"
+        ).strip()
+    )
     if previous_context:
         router_input = (
             f"Previous computation context:\n"

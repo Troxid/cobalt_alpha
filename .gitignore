@@ -16,3 +16,4 @@ wheels/
 !.env.example
 .deepeval
 .idea
+.ruff_cache
