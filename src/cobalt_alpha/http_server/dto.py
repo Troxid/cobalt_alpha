@@ -1,6 +1,6 @@
 from pydantic import BaseModel, Field
 
-from cobalt_alpha.graph import GraphState
+from cobalt_alpha.state import GraphState
 
 
 class InvokeGraphRequestDTO(BaseModel):
@@ -8,7 +8,7 @@ class InvokeGraphRequestDTO(BaseModel):
 
 
 class GraphStateResponseDTO(BaseModel):
-    raw_user_input: str
+    current_user_input: str
     complexity_estimation: float
     selected_model: str
     model_response: str
@@ -16,7 +16,7 @@ class GraphStateResponseDTO(BaseModel):
 
 def graph_state_to_dto(state: GraphState) -> GraphStateResponseDTO:
     return GraphStateResponseDTO(
-        raw_user_input=state.raw_user_input,
+        current_user_input=state.current_user_input,
         complexity_estimation=state.complexity_estimation,
         selected_model=state.selected_model,
         model_response=state.model_response,
